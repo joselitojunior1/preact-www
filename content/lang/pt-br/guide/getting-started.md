@@ -9,7 +9,7 @@ Aqui, você será guiado a criar um componente simples de relógio contador. Inf
 
 
 > :information_desk_person: Você [não _tem_ de usar ES2015 para usar Preact](https://github.com/developit/preact-without-babel)... mas deveria. 
-Esse guia assume que você tem algum tipo de build ES2015 configurada utilizando Babel e/ou webpack/browserify/gulp/grunt/etc. Se você não tem, inicie com o [preact-boilerplate] ou um [template do CodePen ](http://codepen.io/developit/pen/pgaROe?editors=0010).
+Esse guia assume que você tem algum tipo de build ES2015 configurada utilizando Babel e/ou webpack/browserify/gulp/grunt/etc. Se você não tem, inicie com o [preact-boilerplate] ou um [template do CodePen](http://codepen.io/developit/pen/pgaROe?editors=0010).
 
 ---
 
@@ -105,11 +105,11 @@ Renderizar hyperscript com uma virtual DOM é desnecessário, no entanto. Querem
 
 ## Componentes
 
-Preact exporta uma classe genérica `Componente`, que pode ser extendida para construir pedaços auto-atualizáveis e encapsulados de Interface de Usuário. Componentes suportam todo os [métodos do ciclo de vida][lifecycle methods] padrão do React, como `shouldComponentUpdate()` e `componentWillReceiveProps()`. Prover implementações específicas para esses métodos é a maneira recomendada para controlar _quando_ e _como_ os componentes atualizam.
+Preact exporta uma classe genérica `Component`, que pode ser extendida para construir pedaços auto-atualizáveis e encapsulados de Interface de Usuário. Componentes suportam todo os métodos do ciclo de vida (lifecycle methods) padrão do React, como `shouldComponentUpdate()` e `componentWillReceiveProps()`. Prover implementações específicas para esses métodos é a maneira recomendada para controlar _quando_ e _como_ os componentes atualizam.
 
 Componentes também tem um método `render()`, mas diferente do React esse método recebe `(props, state)` como argumentos. Isso provê uma maneira ergonômica para desestruturar  `props` e `state` em variáveis locais para serem referenciadas a partir do JSX.
 
-Vamos dar uma olhada em um componente `Clock bem simples, que mostra o o tempo atual.
+Vamos dar uma olhada em um componente `Clock` bem simples, que mostra o o tempo atual.
 
 
 ```js
